@@ -1,47 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/font/fontawesome/css/all.min.css">
 </head>
+
 <body>
     <div class="app">
         <header class="header">
-            <nav class="header__navbar">
-                <ul class="header__navbar-list">
-                    <li class="header__navbar-item">Access online shop</li>
-                    <div class="header__navbar-item">Connect</div>
-                </ul>
-                <ul class="header__navbar-list">
-                   <li class="header__navbar-item">
-                        <a href="" class="header__navbar-link">Notification </a>
-                   </li>
-                   <li class="header__navbar-item">
-                        <a href="" class="header__navbar-link">Help </a>
-                   </li>
-                   <li class="header__navbar-item">
-                        <a href="" class="header__navbar-link">Sign Up </a>
-                   </li>
-                   <li class="header__navbar-item">
-                        <a href="" class="header__navbar-link">Sign In </a>
-                   </li>
-                </ul>
-            </nav>
+            <div class="grid">
+
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--line">Access online shop</li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-title">Connect</span>
+                            <a href="#" class="header__navbar-icon">
+                                <i class="header__navbar-icon-item fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="header__navbar-icon">
+                                <i class="header__navbar-icon-item fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-link">
+                                <i class="header__navbar-icon-item fas fa-bell"></i>
+                                Notification
+                            </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-link">
+                                <i class="header__navbar-icon-item far fa-question-circle"></i>    
+                                Help
+                            </a>
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--bold header__navbar-item--line">
+                            Sign Up
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--bold">
+                            Sign In
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <div class="container">
-            
+
         </div>
         <footer class="footer">
 
         </footer>
     </div>
 </body>
+
 </html>
