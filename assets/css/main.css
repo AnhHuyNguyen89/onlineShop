@@ -236,6 +236,8 @@
     display: flex;
     align-items: center;
     justify-content:space-between;
+    padding: 0 12px;
+    margin-top: 10px;
 }
 .auth-form__heading{
     font-size:2.2rem;
@@ -306,5 +308,26 @@
 }
 .auth-form__socials--google{
     background-color: var(--white-color);
-    color: #666;
+}
+.fa-google{
+    color: var(--text-color);
+}
+.auth-form__help{
+    display: flex;
+    justify-content: flex-end;
+}
+.auth-form__help-link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #939393;
+}
+.auth-form__help-line{
+    display: block;
+    border-left: 1px solid #EAEAEA;
+    height: 22px;
+    margin: 0 16px;
+}
+.auth-form__help-forget{
+    color: var(--primary-color);
+
 }
