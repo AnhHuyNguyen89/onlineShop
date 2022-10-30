@@ -101,10 +101,11 @@ html{
     padding: 0 8px;
     outline: none;
     color: var(--text-color);
-    display: flex;
+    display: inline-flex;
     justify-content:center;
     align-items:center;
     line-height:1.6rem;
+    background-color:var(--white-color)
 }
 .btn.btn--normal:hover{
     background-color: rgba(0,0,0,0.05);
