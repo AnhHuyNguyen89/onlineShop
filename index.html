@@ -297,25 +297,33 @@
                     <div class="grid__column-10">
                         <div class="home-filter">
                             <span class="home-filter__label">Filter by</span>  
-                            <button class="btn">Most Popular</button>  
-                            <button class="btn btn-primary">New</button>  
-                            <button class="btn">Top Seller</button>  
+                            <button class="home-filter__btn btn">Most Popular</button>  
+                            <button class="home-filter__btn btn btn-primary">New</button>  
+                            <button class="home-filter__btn btn">Top Seller</button>  
 
                             <div class="select-input">
                                 <span class="select-input-label">Price</span>
-                                <i class="fas fa-angle-down"></i>
+                                <i class="select-input__icon fas fa-angle-down"></i>
+
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="#" class="select-input__link">Price: Descending</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="#" class="select-input__link">Price: Ascending</a>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="home-filter__page">
                                 <span class="home-filter__page-num">
-                                    <span class="home-filter__page-current">1</span>
-                                    /14
+                                    <span class="home-filter__page-current">1</span>/14
                                 </span>
                                 <div class="home-filter__page-control">
-                                    <a href="" class="home-filter__page-btn">
-                                        <i class="fas fa-angle-left"></i>
+                                    <a href="" class="home-filter__page-btn home-filter__page-disabled">
+                                        <i class="home-filter__page-icon  fas fa-angle-left "></i>
                                     </a>
                                     <a href="" class="home-filter__page-btn">
-                                        <i class="fas fa-angle-right"></i>
+                                        <i class="home-filter__page-icon fas fa-angle-right"></i>
                                     </a>
                                 </div>
                             </div>
