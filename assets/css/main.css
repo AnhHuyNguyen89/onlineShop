@@ -41,7 +41,7 @@
     position: absolute;
     z-index: 1;
     padding-left: 0;
-    top:100%;
+    top:calc(100% + 6px);
     right: 0;
     background-color: var(--white-color);
     border-radius:2px;
@@ -160,6 +160,7 @@
     display:none;
     animation: fadeIn ease-in-out .3s;
     z-index: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .header__qr::before{
     content: "";
@@ -468,6 +469,7 @@
     display: none;
     animation: fadeIn ease-in .2s;
     cursor:default;
+    z-index: 1;
 }
 .header__cart-list::after{
     content: "";
@@ -582,6 +584,7 @@
     padding-left: 0;
     border-radius: 2px;
     /* overflow:hidden; */
+    z-index: 1;
     display: none;
     animation: fadeIn ease-in .2s;
 }
@@ -630,6 +633,7 @@
     box-shadow: 0 1px 5px rgb(189,189,189);
     display: none;
     overflow: hidden;
+    z-index: 1;
 }
 .header__search-history-heading{
     margin:6px 12px ;
@@ -669,6 +673,9 @@
 .header__cart-list-item{
     padding-left:0;
     list-style: none;
+    /* view port height is the height of the screen of website */
+    height:56vh; 
+    overflow-y:scroll;
 }
 .header__cart-item{
     display: flex;
@@ -700,6 +707,15 @@
     font-weight: 500;
     color: var(--text-color);
     margin: 0;
+    line-height:2rem;
+    max-height:4rem;
+    overflow: hidden;
+    flex: 1;
+    padding-right: 16px;
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-align: left;
 }
 .header__cart-item-price{
     font-size: 1.4rem;
@@ -719,7 +735,7 @@
 .header__cart-item-body{
     display: flex;
     justify-content:space-between;
-    margin-top: 8px;
+    margin-top: 18px;
 }
     
 .header__cart-item-description{
@@ -755,50 +771,45 @@
     border-radius: 2px;
 }
 .category__heading{
-    font-size:1.6rem;
+    font-size:1.5rem;
     color: var(--text-color);
-    padding: 12px 16px;
+    padding: 16px 16px 0;
     margin-top: 0;
-    border-bottom: 1px solid rgba(0,0,0, 0.1);
-}
-.category__heading-icon{
-    font-size:1.4rem;
-    margin-right: 4px;
-    position: relative;
-    top: -1px;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 .category-list{
     padding: 0 0 8px 0;
     list-style: none;
-    margin-left: 10px;
-}
-/* .category-item{
 
-} */
+}
+.category-item{
+    position:relative;
+}
+.category-item:first-child::before{
+    display: none;
+}
+.category-item::before{
+    content: "";
+    border-top:1px solid #E1E1E1;
+    position:absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+}
 .category-item--active .category-item-link{
     color:var(--primary-color);
 }
-.category-item--active .category-item-link::before{
-    content:"";
-    position: absolute;
-    border: 4px solid;
-    top: 50%;
-    left: 6px;
-    border-color: transparent transparent transparent var(--primary-color);
-    transform: translateY(-50%);
-}
+
 .category-item-link{
     position: relative;
     text-decoration: none;
     color:var(--text-color);
     font-size: 1.6rem;
-    padding:10px 16px;
+    padding:8px 20px;
     display: block;
-    transition: right linear 0.1s;
-    right: 0;
 }
 .category-item-link:hover{
-    right: -4px;
     color:var(--primary-color);
 }
 
@@ -807,7 +818,7 @@
     background-color: rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
-    padding:12px 22px;
+    padding:12px 20px;
     border-radius: 2px;
 }
 .home-filter__page{
@@ -875,8 +886,7 @@
     text-decoration: none;
     background-color: var(--white-color);
     margin-top: 10px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-radius: 2px;
     box-shadow: 0 0.1rem 0.2rem 0 rgba(0,0,0,0.1);
     transition: transform ease-in .1s;
     will-change: transform;
@@ -890,6 +900,9 @@
     padding-top: 100%;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: top center;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
 }
 .home-product-item__name{
     font-size:1.4rem;
@@ -1006,6 +1019,7 @@ i.home-product-item__like-icon-fill{
     height:36px;
     background-color:rgba(255, 216, 64, 0.8);
     text-align: center;
+    border-top-right-radius: 2px;
 }
 .home-product-item__sale-off::after{
     content: "";
